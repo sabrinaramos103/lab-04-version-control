@@ -48,13 +48,15 @@ student           6183   0.0  0.0  2453516   1316 s000  S+    2:57PM   0:00.00 n
 5. Stop (kill) the process that's called nano "temp.txt" by using the process id shown in the output of your previous command (first number after user name).
 
 ----------
-
+student           6458   0.0  0.0  2423564     24 s001  S+    3:11PM   0:00.00 grep -i temp.txt
+student           6443   0.0  0.0  2435084   1188 s000  S+    3:10PM   0:00.00 nano temp.txt
+ent-v314-014:~ student$ kill 6443
 
 ==========
 6. Go to your other terminal window.  What happened to nano?  What was the message on the screen?
 
 ----------
-
+Received SIGHUP or SIGTERM
 
 ==========
 7. Close the terminal window that nano was in, and go back to the terminal where you ran ps.
@@ -73,26 +75,28 @@ Quit and save when you're done.
 
 What command did you use to do this?
 ----------
-
+touch hello.sh
+nano hello.sh
 
 ==========
 9. Change the permissions (modify) on hello.sh so that the *user* (u) can *execute* (x) it: 
 
 Write the commands that you used to do this below.
 ----------
-
+chmod u+x hello.sh
 
 ==========
 10. Run your script (hello.sh).
 
 How did you do this?  What was the output?
 ----------
-
+./hello.sh
 
 ==========
 11. Change to the root directory.  Try running your script again (hello.sh).  What was the output (if there's an error, write it out)?
 ----------
-
+student$ ./hello.sh
+-bash: ./hello.sh: No such file or directory
 
 ==========
 12. Now trying using the full, absolute path to your script (that is, starting with /...).  What did you write in?  What did it do?
